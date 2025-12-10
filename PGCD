@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, x, y, reste;
+    
+    printf("Entrez deux nombres entiers a et b : ");
+    scanf("%d %d", &a, &b);
+    
+    x = a;
+    y = b;
+    
+    // Calcul du PGCD avec l'algorithme d'Euclide
+    while (y != 0) {
+        reste = x % y;
+        x = y;
+        y = reste;
+    }
+    
+    printf("PGCD(%d, %d) = %d\n", a, b, x);
+    
+    return 0;
+}
